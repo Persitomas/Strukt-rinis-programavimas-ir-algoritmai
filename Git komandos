@@ -1,0 +1,8 @@
+git checkout main (esam tikri, kad dirbam ant main branch)
+git pull (ant main isikeliam naujausia versija)
+git branch pavadinimas_branch (sukuriamas branch ant kurio dirbama)
+git checkout pavadinimas_branch (nueinam i branch ir dirbame jame)
+(darai keitimus, butina issaugoti pries norint uzkelti)
+git add .  (Ikelti pakeitimus)
+git commit -m "pavadinimas pakeitimo" (paruosta pushinti)
+git push (ikeliama i repositorija)
