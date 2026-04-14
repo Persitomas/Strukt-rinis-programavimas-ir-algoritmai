@@ -7,11 +7,11 @@ int main() {
 
     int pasirinkimas;
     int valiuta;
-    int kryptis;
+    int konvertavimo_kryptis;
     double kiekis;
     double rezultatas;
 
-    // Valiut¯ kursai
+    // Valiutu kursai
     double GBP_Bendras   = 0.8729;
     double GBP_Pirkti    = 0.8600;
     double GBP_Parduoti  = 0.9220;
@@ -23,7 +23,7 @@ int main() {
     double INR_Bendras   = 104.6918;
     double INR_Pirkti    = 101.3862;
     double INR_Parduoti  = 107.8546;
-
+    // menu
     cout << "=== Valiutos keitykla ===" << endl;
     cout << "1 - Palyginti valiutos kursa" << endl;
     cout << "2 - Pirkti valiuta" << endl;
@@ -41,13 +41,13 @@ int main() {
 
     if (pasirinkimas == 1) {
 
-        cout << "\nPasirinkite konvertavim‡:" << endl;
+        cout << "\nPasirinkite konvertavima:" << endl;
         cout << "1 - EUR -> Pasirinkta valiuta" << endl;
         cout << "2 - Pasirinkta valiuta -> EUR" << endl;
 
-        cin >> kryptis;
+        cin >> konvertavimo_kryptis;
 
-        if (kryptis == 1) {
+        if (konvertavimo_kryptis == 1) {
 
             if (valiuta == 1)
                 cout << "1 EUR = " << GBP_Bendras << " GBP" << endl;
@@ -57,7 +57,7 @@ int main() {
                 cout << "1 EUR = " << INR_Bendras << " INR" << endl;
 
         }
-        else if (kryptis == 2) {
+        else if (konvertavimo_kryptis == 2) {
 
             if (valiuta == 1)
                 cout << "1 GBP = " << 1 / GBP_Bendras << " EUR" << endl;
@@ -72,7 +72,7 @@ int main() {
 
     else if (pasirinkimas == 2) {
 
-        cout << "Iveskite EUR kiek· u˛ kur· norite pirkti pasirinktos valiutos: ";
+        cout << "Iveskite EUR kiek norite pirkti pasirinktos valiutos: ";
         cin >> kiekis;
 
         if (valiuta == 1)
