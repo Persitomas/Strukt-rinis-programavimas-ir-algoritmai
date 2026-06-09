@@ -1,19 +1,19 @@
 #include <iostream>
 #include <string>
-
+ 
 using namespace std;
-
+ 
 int main() {
-    const int MAX_MOKINIAI = 100; //Negali b˚ti daugiau nei 100 mokiniu
-    const int MAX_PAZYMIAI = 10; // Negali b˚ti daugiau nei 10 pazymiu mokiniui
-
+    const int MAX_MOKINIAI = 100; // iki 100 mokiniu
+    const int MAX_PAZYMIAI = 10; // iki 10 pazymiu
+ 
     string vardai[MAX_MOKINIAI];
     int pazymiai[MAX_MOKINIAI][MAX_PAZYMIAI];
-    int kiekiai[MAX_MOKINIAI]; // Kiek kiekvienas mokinys turi ·vest¯ pa˛ymi¯
+    int kiekiai[MAX_MOKINIAI]; // Kiek kiekvienas mokinys turi ivestu pazymiu
     int mokiniuSkaicius = 0;
-
     int pasirinkimas;
-
+ 
+ 
     do {
         cout << "\n====== MOKINIU PAZYMIU SISTEMA ======\n"; //meniu
         cout << "1. Ivesti nauja mokini\n";
@@ -23,14 +23,15 @@ int main() {
         cout << "0. Iseiti\n";
         cout << "Pasirinkimas: ";
         cin >> pasirinkimas;
-
-        if (pasirinkimas == 1) {
+ 
+ 
+        if (pasirinkimas == 1) { // ivesti mokini
             if (mokiniuSkaicius < MAX_MOKINIAI) {
                 cout << "Iveskite varda: ";
                 cin >> vardai[mokiniuSkaicius];
-                cout << "Kiek pazymiu ivesite (iki 10)? ";
+                cout << "Pasirinkite kiek ivesite pazymiu (iki 10) ";
                 cin >> kiekiai[mokiniuSkaicius];
-
+ 
                 for (int i = 0; i < kiekiai[mokiniuSkaicius]; i++) {
                     cout << "Iveskite " << i + 1 << "-a pazymi: ";
                     cin >> pazymiai[mokiniuSkaicius][i];
@@ -39,8 +40,8 @@ int main() {
             } else {
                 cout << "Sarasas pilnas!\n";
             }
-        } 
-        else if (pasirinkimas == 2) {
+        }
+        else if (pasirinkimas == 2) { // perziura duomenu
             for (int i = 0; i < mokiniuSkaicius; i++) {
                 cout << i + 1 << ". " << vardai[i] << ": ";
                 for (int j = 0; j < kiekiai[i]; j++) {
@@ -48,32 +49,32 @@ int main() {
                 }
                 cout << endl;
             }
-        } 
+        }
         else if (pasirinkimas == 3) {
             int mokinioIndeksas, pazymioIndeksas;
             cout << "Kurio mokinio pazymi keisite (eiles nr.)? ";
             cin >> mokinioIndeksas;
             mokinioIndeksas--; // Paverciame i masyvo indeksa
-
+ 
             if (mokinioIndeksas >= 0 && mokinioIndeksas < mokiniuSkaicius) {
                 cout << "Kuri pazymi keisite (1-" << kiekiai[mokinioIndeksas] << ")? ";
                 cin >> pazymioIndeksas;
                 pazymioIndeksas--;
-                
+               
                 if (pazymioIndeksas >= 0 && pazymioIndeksas < kiekiai[mokinioIndeksas]) {
                     cout << "Iveskite nauja pazymi: ";
                     cin >> pazymiai[mokinioIndeksas][pazymioIndeksas];
                 }
             }
-        } 
+        }
         else if (pasirinkimas == 4) {
             int mokinioIndeksas;
-            cout << "Kuri mokin· pasalinti (eiles nr.)? ";
+            cout << "Kuri mokini pasalinti (eiles nr.)? ";
             cin >> mokinioIndeksas;
             mokinioIndeksas--;
-
+ 
             if (mokinioIndeksas >= 0 && mokinioIndeksas < mokiniuSkaicius) {
-                // Pastumiame visus elementus per vien‡ viet‡ atgal
+                // Pastumiame visus elementus per viena vieta atgal
                 for (int i = mokinioIndeksas; i < mokiniuSkaicius - 1; i++) {
                     vardai[i] = vardai[i + 1];
                     kiekiai[i] = kiekiai[i + 1];
@@ -86,6 +87,6 @@ int main() {
             }
         }
     } while (pasirinkimas != 0); //iseiti
-
+ 
     return 0;
 }
