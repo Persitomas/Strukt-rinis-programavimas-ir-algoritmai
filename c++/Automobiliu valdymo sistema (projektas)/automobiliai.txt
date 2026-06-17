@@ -1,0 +1,15 @@
+1;Toyota;Corolla;2018;9500;Benzinas
+2;BMW;320;2016;12500;Dyzelinas
+3;Tesla;Model3;2021;28000;Elektra
+4;Audi;A4;2017;14000;Dyzelinas
+5;Volkswagen;Golf;2015;8500;Benzinas
+6;Mercedes;C220;2019;24000;Dyzelinas
+7;Ford;Focus;2014;6200;Benzinas
+8;Honda;Civic;2020;17500;Benzinas
+9;Nissan;Leaf;2018;13500;Elektra
+10;Kia;Sportage;2021;21000;Benzinas
+11;Hyundai;Tucson;2020;19500;Benzinas
+12;Volvo;V60;2018;18500;Dyzelinas
+13;Mazda;CX5;2019;20500;Benzinas
+14;Skoda;Octavia;2017;11500;Dyzelinas
+15;Renault;Megane;2016;7800;Benzinas
